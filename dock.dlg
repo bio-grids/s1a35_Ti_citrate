@@ -1,0 +1,3880 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			3:58 25" a.m., 03/01/2024
+                   on host:		"DHN-POWER"
+Current Working Directory = "C:\projects\md\prod\saem_bhai"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 22812, 1709243905.
+Docking parameter file (DPF) used for this docking:		C:/projects/md/prod/saem_bhai/dock.dpf
+DPF> parameter_file AD4_parameters.dat
+
+Using read_parameter_library() to try to open and read "AD4_parameters.dat".
+
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 22812, 1709243905.
+DPF> ligand_types C OA Ti                 # atoms types in ligand
+
+DPF> fld prot.maps.fld                    # grid_data_file
+
+Opening Grid Map Dimensions file:		prot.maps.fld
+Grid Point Spacing =				0.581 Angstroms
+
+Even Number of User-specified Grid Points =	126 x-points
+						126 y-points
+						126 z-points
+
+Coordinates of Central Grid Point of Maps =	(19.805, 3.841, 18.671)
+Macromolecule file used to create Grid Maps =	prot.pdbqt
+Grid Parameter file used to create Grid Maps =	C:/projects/md/prod/saem_bhai/dock.gpf
+Minimum coordinates in grid = (-16.798, -32.762, -17.932)
+Maximum coordinates in grid = (56.408, 40.444, 55.274)
+
+DPF> map prot.C.map                       # atom-specific affinity map
+
+DPF> map prot.OA.map                      # atom-specific affinity map
+
+DPF> map prot.Ti.map                      # atom-specific affinity map
+
+DPF> elecmap prot.e.map                   # electrostatics map
+
+DPF> desolvmap prot.d.map                 # desolvation map
+
+DPF> move lig.pdbqt                       # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "lig.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  16 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: C24_23  and  C30_29 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: C24_23  and  C27_26 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C24_23  and  C31_30 
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: C25_24  and  C33_32 
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: C25_24  and  C32_31 
+INPUT-LIGAND-PDBQT: REMARK    7  A    between atoms: C25_24  and  C28_27 
+INPUT-LIGAND-PDBQT: REMARK    8  A    between atoms: C26_25  and  C29_28 
+INPUT-LIGAND-PDBQT: REMARK    9  A    between atoms: C26_25  and  C34_33 
+INPUT-LIGAND-PDBQT: REMARK   10  A    between atoms: C26_25  and  C35_34 
+INPUT-LIGAND-PDBQT: REMARK   11  A    between atoms: C30_29  and  C36_35 
+INPUT-LIGAND-PDBQT: REMARK   12  A    between atoms: C31_30  and  C37_36 
+INPUT-LIGAND-PDBQT: REMARK   13  A    between atoms: C32_31  and  C38_37 
+INPUT-LIGAND-PDBQT: REMARK   14  A    between atoms: C33_32  and  C39_38 
+INPUT-LIGAND-PDBQT: REMARK   15  A    between atoms: C34_33  and  C40_39 
+INPUT-LIGAND-PDBQT: REMARK   16  A    between atoms: C35_34  and  C41_40 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1 TI1          0       7.078  -0.527   0.791  1.00  0.00     0.000 Ti
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: TORSDOF 16
+________________________________________________________________________________
+
+Total charge on ligand                               =	+0.000 e
+REMARK  16 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+REMARK    2  A    between atoms: C24_23  and  C30_29 
+REMARK    3  A    between atoms: C24_23  and  C27_26 
+REMARK    4  A    between atoms: C24_23  and  C31_30 
+REMARK    5  A    between atoms: C25_24  and  C33_32 
+REMARK    6  A    between atoms: C25_24  and  C32_31 
+REMARK    7  A    between atoms: C25_24  and  C28_27 
+REMARK    8  A    between atoms: C26_25  and  C29_28 
+REMARK    9  A    between atoms: C26_25  and  C34_33 
+REMARK   10  A    between atoms: C26_25  and  C35_34 
+REMARK   11  A    between atoms: C30_29  and  C36_35 
+REMARK   12  A    between atoms: C31_30  and  C37_36 
+REMARK   13  A    between atoms: C32_31  and  C38_37 
+REMARK   14  A    between atoms: C33_32  and  C39_38 
+REMARK   15  A    between atoms: C34_33  and  C40_39 
+REMARK   16  A    between atoms: C35_34  and  C41_40 
+
+*** No Rotatable Bonds detected in Small Molecule. ***
+
+Number of atoms in ligand:  1
+
+Number of non-hydrogen atoms in ligand:  1
+
+Number of vibrational degrees of freedom of ligand:  -3
+
+
+Number of torsional degrees of freedom = 16
+Estimated loss of torsional free energy upon binding = +4.3904 kcal/mol
+
+
+DPF> about 6.213 0.333 0.023            # small molecule center
+
+Small molecule center of rotation =	(+6.213, +0.333, +0.023)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(19.069, 8.343, 47.273) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( -0.793, 0.323, 0.482, -0.185 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 16                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 16
+Free energy coefficient for torsional degrees of freedom = 0.2744 as specified in parameter library "AD4_parameters.dat".
+
+Estimated loss of torsional free energy upon binding = +4.3904 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> do_global_only 50                    # do this many GA runs
+
+centering ligand on specified point: 6.213 0.333 0.023
+Furthest true ligand atom from "about" center is 1.441 Angstroms (maxrad).
+Number of requested GA dockings = 50 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 50
+Run: 1 Seed: 952760636 290670589 [ Run 1 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 4.060 -3.873 9.914 quatxyzw -0.345321 -0.813523 -0.436504 0.168517 center 6.213 0.333 0.023 ntor 0
+State:	  4.060  -3.873   9.914  -0.350 -0.825 -0.443 160.597  
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 4.060133 -3.873340 9.913525
+DOCKED: USER    NEWDPF quaternion0 -0.345321 -0.813523 -0.436504 0.168517
+DOCKED: USER    NEWDPF axisangle0 -0.350331 -0.825326 -0.442837 160.596772
+DOCKED: USER    NEWDPF quat0 -0.350331 -0.825326 -0.442837 160.596772
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.536  -3.131   8.795 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 50
+Run: 2 Seed: 1052144083 1205808435 [ Run 2 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -1.962 3.786 2.953 quatxyzw 0.024823 -0.891226 -0.452265 -0.023607 center 6.213 0.333 0.023 ntor 0
+State:	 -1.962   3.786   2.953   0.025 -0.891 -0.452 -177.295  
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -1.961843 3.786248 2.952562
+DOCKED: USER    NEWDPF quaternion0 0.024823 -0.891226 -0.452265 -0.023607
+DOCKED: USER    NEWDPF axisangle0 0.024830 -0.891474 -0.452391 -177.294621
+DOCKED: USER    NEWDPF quat0 0.024830 -0.891474 -0.452391 -177.294621
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.855   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 50
+Run: 3 Seed: 1912787275 1742890913 [ Run 3 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.297
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 30.323 -21.309 24.698 quatxyzw -0.746539 0.437395 0.415692 0.280295 center 6.213 0.333 0.023 ntor 0
+State:	 30.323 -21.309  24.698  -0.778  0.456  0.433 147.444  
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.30 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.30 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 30.322690 -21.309039 24.698154
+DOCKED: USER    NEWDPF quaternion0 -0.746539 0.437395 0.415692 0.280295
+DOCKED: USER    NEWDPF axisangle0 -0.777715 0.455660 0.433051 147.444403
+DOCKED: USER    NEWDPF quat0 -0.777715 0.455660 0.433051 147.444403
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.254 -21.722  23.319 -0.30 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 50
+Run: 4 Seed: 571507981 662090047 [ Run 4 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 3.570 -4.476 9.312 quatxyzw -0.912400 -0.397490 -0.043992 -0.087137 center 6.213 0.333 0.023 ntor 0
+State:	  3.570  -4.476   9.312  -0.916 -0.399 -0.044 -170.002  
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 3.569785 -4.476447 9.312105
+DOCKED: USER    NEWDPF quaternion0 -0.912400 -0.397490 -0.043992 -0.087137
+DOCKED: USER    NEWDPF axisangle0 -0.915884 -0.399008 -0.044160 -170.002188
+DOCKED: USER    NEWDPF quat0 -0.915884 -0.399008 -0.044160 -170.002188
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.536  -3.132   8.795 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 50
+Run: 5 Seed: 2006832795 800524149 [ Run 5 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.595 12.791 22.357 quatxyzw -0.060476 0.843027 -0.395817 -0.359135 center 6.213 0.333 0.023 ntor 0
+State:	 41.595  12.791  22.357  -0.065  0.903 -0.424 -137.906  
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.595465 12.791413 22.356743
+DOCKED: USER    NEWDPF quaternion0 -0.060476 0.843027 -0.395817 -0.359135
+DOCKED: USER    NEWDPF axisangle0 -0.064799 0.903289 -0.424111 -137.905858
+DOCKED: USER    NEWDPF quat0 -0.064799 0.903289 -0.424111 -137.905858
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.305  11.394  22.156 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 50
+Run: 6 Seed: 896567942 352000505 [ Run 6 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.313
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.171 -15.403 26.298 quatxyzw -0.081121 0.831228 0.158658 -0.526599 center 6.213 0.333 0.023 ntor 0
+State:	 22.171 -15.403  26.298  -0.095  0.978  0.187 -116.448  
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 22.170623 -15.403321 26.298186
+DOCKED: USER    NEWDPF quaternion0 -0.081121 0.831228 0.158658 -0.526599
+DOCKED: USER    NEWDPF axisangle0 -0.095423 0.977785 0.186631 -116.448056
+DOCKED: USER    NEWDPF quat0 -0.095423 0.977785 0.186631 -116.448056
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      22.709 -15.913  25.062 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 50
+Run: 7 Seed: 504424082 350753054 [ Run 7 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.313
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 23.325 -14.669 25.454 quatxyzw 0.289994 -0.894487 -0.073955 -0.332156 center 6.213 0.333 0.023 ntor 0
+State:	 23.325 -14.669  25.454   0.307 -0.948 -0.078 -141.201  
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 23.324616 -14.669418 25.454166
+DOCKED: USER    NEWDPF quaternion0 0.289994 -0.894487 -0.073955 -0.332156
+DOCKED: USER    NEWDPF axisangle0 0.307450 -0.948329 -0.078406 -141.200627
+DOCKED: USER    NEWDPF quat0 0.307450 -0.948329 -0.078406 -141.200627
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      22.711 -15.913  25.061 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 50
+Run: 8 Seed: 443278924 145970380 [ Run 8 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.498 -2.614 12.629 quatxyzw 0.746767 0.147482 -0.641966 -0.092019 center 6.213 0.333 0.023 ntor 0
+State:	  8.498  -2.614  12.629   0.750  0.148 -0.645 -169.440  
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 8.497546 -2.614287 12.629280
+DOCKED: USER    NEWDPF quaternion0 0.746767 0.147482 -0.641966 -0.092019
+DOCKED: USER    NEWDPF axisangle0 0.749949 0.148110 -0.644701 -169.440409
+DOCKED: USER    NEWDPF quat0 0.749949 0.148110 -0.644701 -169.440409
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       7.605  -1.969  11.699 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 50
+Run: 9 Seed: 1022794344 1272280409 [ Run 9 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 52.553 14.742 9.202 quatxyzw 0.448041 0.881191 -0.106178 0.107178 center 6.213 0.333 0.023 ntor 0
+State:	 52.553  14.742   9.202   0.451  0.886 -0.107 167.695  
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 52.553237 14.742400 9.202403
+DOCKED: USER    NEWDPF quaternion0 0.448041 0.881191 -0.106178 0.107178
+DOCKED: USER    NEWDPF axisangle0 0.450637 0.886297 -0.106793 167.694614
+DOCKED: USER    NEWDPF quat0 0.450637 0.886297 -0.106793 167.694614
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      51.178  14.880   8.794 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 50
+Run: 10 Seed: 1289715666 970248655 [ Run 10 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.690 11.617 20.786 quatxyzw -0.202648 0.432786 -0.878197 -0.019998 center 6.213 0.333 0.023 ntor 0
+State:	 41.690  11.617  20.786  -0.203  0.433 -0.878 -177.708  
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.689657 11.616527 20.786118
+DOCKED: USER    NEWDPF quaternion0 -0.202648 0.432786 -0.878197 -0.019998
+DOCKED: USER    NEWDPF axisangle0 -0.202688 0.432873 -0.878373 -177.708217
+DOCKED: USER    NEWDPF quat0 -0.202688 0.432873 -0.878373 -177.708217
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.304  11.394  22.157 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 11 of 50
+Run: 11 Seed: 2091468083 963433456 [ Run 11 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 4.570 -3.037 9.795 quatxyzw 0.370927 -0.602003 -0.658679 -0.257192 center 6.213 0.333 0.023 ntor 0
+State:	  4.570  -3.037   9.795   0.384 -0.623 -0.682 -150.193  
+
+DOCKED: MODEL       11
+DOCKED: USER    Run = 11
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 4.569915 -3.037048 9.795129
+DOCKED: USER    NEWDPF quaternion0 0.370927 -0.602003 -0.658679 -0.257192
+DOCKED: USER    NEWDPF axisangle0 0.383839 -0.622959 -0.681608 -150.192941
+DOCKED: USER    NEWDPF quat0 0.383839 -0.622959 -0.681608 -150.192941
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.537  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 12 of 50
+Run: 12 Seed: 1045764919 2133645394 [ Run 12 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -4.275 3.962 2.034 quatxyzw -0.893565 0.396830 -0.207672 -0.030669 center 6.213 0.333 0.023 ntor 0
+State:	 -4.275   3.962   2.034  -0.894  0.397 -0.208 -176.485  
+
+DOCKED: MODEL       12
+DOCKED: USER    Run = 12
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -4.274976 3.962421 2.033522
+DOCKED: USER    NEWDPF quaternion0 -0.893565 0.396830 -0.207672 -0.030669
+DOCKED: USER    NEWDPF axisangle0 -0.893985 0.397017 -0.207770 -176.485085
+DOCKED: USER    NEWDPF quat0 -0.893985 0.397017 -0.207770 -176.485085
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.854   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 13 of 50
+Run: 13 Seed: 1329512224 648373630 [ Run 13 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 7.240 -3.015 12.621 quatxyzw 0.684233 0.528751 0.394936 -0.310280 center 6.213 0.333 0.023 ntor 0
+State:	  7.240  -3.015  12.621   0.720  0.556  0.415 -143.848  
+
+DOCKED: MODEL       13
+DOCKED: USER    Run = 13
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 7.240362 -3.015297 12.621255
+DOCKED: USER    NEWDPF quaternion0 0.684233 0.528751 0.394936 -0.310280
+DOCKED: USER    NEWDPF axisangle0 0.719756 0.556202 0.415440 -143.847805
+DOCKED: USER    NEWDPF quat0 0.719756 0.556202 0.415440 -143.847805
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       7.607  -1.969  11.700 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 14 of 50
+Run: 14 Seed: 806297337 1637773437 [ Run 14 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.798 -2.399 11.015 quatxyzw 0.421681 0.688476 0.245032 0.536792 center 6.213 0.333 0.023 ntor 0
+State:	  8.798  -2.399  11.015   0.500  0.816  0.290 115.069  
+
+DOCKED: MODEL       14
+DOCKED: USER    Run = 14
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 8.798201 -2.399453 11.015030
+DOCKED: USER    NEWDPF quaternion0 0.421681 0.688476 0.245032 0.536792
+DOCKED: USER    NEWDPF axisangle0 0.499791 0.816006 0.290420 115.068985
+DOCKED: USER    NEWDPF quat0 0.499791 0.816006 0.290420 115.068985
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       7.605  -1.969  11.699 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 15 of 50
+Run: 15 Seed: 20813856 767232503 [ Run 15 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.334
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 7.468 21.220 28.602 quatxyzw -0.730036 -0.082900 -0.532171 0.420678 center 6.213 0.333 0.023 ntor 0
+State:	  7.468  21.220  28.602  -0.805 -0.091 -0.587 130.245  
+
+DOCKED: MODEL       15
+DOCKED: USER    Run = 15
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 7.468078 21.220283 28.601572
+DOCKED: USER    NEWDPF quaternion0 -0.730036 -0.082900 -0.532171 0.420678
+DOCKED: USER    NEWDPF axisangle0 -0.804704 -0.091379 -0.586601 130.245246
+DOCKED: USER    NEWDPF quat0 -0.804704 -0.091379 -0.586601 130.245246
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       8.763  21.852  28.548 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 16 of 50
+Run: 16 Seed: 556707816 1316028495 [ Run 16 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.051 10.163 22.197 quatxyzw 0.685548 0.293539 -0.608054 0.272268 center 6.213 0.333 0.023 ntor 0
+State:	 42.051  10.163  22.197   0.712  0.305 -0.632 148.401  
+
+DOCKED: MODEL       16
+DOCKED: USER    Run = 16
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 42.050564 10.162610 22.197250
+DOCKED: USER    NEWDPF quaternion0 0.685548 0.293539 -0.608054 0.272268
+DOCKED: USER    NEWDPF axisangle0 0.712464 0.305063 -0.631927 148.401453
+DOCKED: USER    NEWDPF quat0 0.712464 0.305063 -0.631927 148.401453
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.302  11.394  22.156 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 17 of 50
+Run: 17 Seed: 1997410487 317003473 [ Run 17 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.343 10.669 21.461 quatxyzw -0.122404 -0.101814 0.987215 -0.007587 center 6.213 0.333 0.023 ntor 0
+State:	 42.343  10.669  21.461  -0.122 -0.102  0.987 -179.131  
+
+DOCKED: MODEL       17
+DOCKED: USER    Run = 17
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 42.342795 10.669483 21.461029
+DOCKED: USER    NEWDPF quaternion0 -0.122404 -0.101814 0.987215 -0.007587
+DOCKED: USER    NEWDPF axisangle0 -0.122408 -0.101817 0.987243 -179.130583
+DOCKED: USER    NEWDPF quat0 -0.122408 -0.101817 0.987243 -179.130583
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.308  11.393  22.157 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 18 of 50
+Run: 18 Seed: 1445418251 135254109 [ Run 18 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -4.063 4.343 1.216 quatxyzw 0.673388 -0.475761 0.372652 0.425829 center 6.213 0.333 0.023 ntor 0
+State:	 -4.063   4.343   1.216   0.744 -0.526  0.412 129.594  
+
+DOCKED: MODEL       18
+DOCKED: USER    Run = 18
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -4.062552 4.342728 1.216436
+DOCKED: USER    NEWDPF quaternion0 0.673388 -0.475761 0.372652 0.425829
+DOCKED: USER    NEWDPF axisangle0 0.744237 -0.525817 0.411859 129.593651
+DOCKED: USER    NEWDPF quat0 0.744237 -0.525817 0.411859 129.593651
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.855   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 19 of 50
+Run: 19 Seed: 190505171 330033419 [ Run 19 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.471 -3.075 11.381 quatxyzw 0.542197 0.313209 -0.719967 0.299283 center 6.213 0.333 0.023 ntor 0
+State:	  8.471  -3.075  11.381   0.568  0.328 -0.755 145.171  
+
+DOCKED: MODEL       19
+DOCKED: USER    Run = 19
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 8.470525 -3.075377 11.380512
+DOCKED: USER    NEWDPF quaternion0 0.542197 0.313209 -0.719967 0.299283
+DOCKED: USER    NEWDPF axisangle0 0.568243 0.328255 -0.754552 145.170875
+DOCKED: USER    NEWDPF quat0 0.568243 0.328255 -0.754552 145.170875
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       7.604  -1.969  11.700 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 20 of 50
+Run: 20 Seed: 616625675 1471460636 [ Run 20 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.297
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 30.663 -22.114 21.991 quatxyzw 0.280850 -0.136294 0.942043 0.122889 center 6.213 0.333 0.023 ntor 0
+State:	 30.663 -22.114  21.991   0.283 -0.137  0.949 165.882  
+
+DOCKED: MODEL       20
+DOCKED: USER    Run = 20
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.30 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.30 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 30.663330 -22.114392 21.991263
+DOCKED: USER    NEWDPF quaternion0 0.280850 -0.136294 0.942043 0.122889
+DOCKED: USER    NEWDPF axisangle0 0.282995 -0.137335 0.949238 165.882321
+DOCKED: USER    NEWDPF quat0 0.282995 -0.137335 0.949238 165.882321
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.260 -21.723  23.319 -0.30 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 21 of 50
+Run: 21 Seed: 619788899 1972572923 [ Run 21 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.292
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 29.616 -16.353 17.091 quatxyzw 0.918297 -0.215124 0.117790 -0.310770 center 6.213 0.333 0.023 ntor 0
+State:	 29.616 -16.353  17.091   0.966 -0.226  0.124 -143.789  
+
+DOCKED: MODEL       21
+DOCKED: USER    Run = 21
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.10 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.29 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 29.615509 -16.352535 17.090644
+DOCKED: USER    NEWDPF quaternion0 0.918297 -0.215124 0.117790 -0.310770
+DOCKED: USER    NEWDPF axisangle0 0.966135 -0.226331 0.123926 -143.788682
+DOCKED: USER    NEWDPF quat0 0.966135 -0.226331 0.123926 -143.788682
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.843 -16.494  16.348 -0.29 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 22 of 50
+Run: 22 Seed: 1546734075 392049796 [ Run 22 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 3.399 -1.701 8.927 quatxyzw 0.202515 -0.823980 0.355229 0.392247 center 6.213 0.333 0.023 ntor 0
+State:	  3.399  -1.701   8.927   0.220 -0.896  0.386 133.811  
+
+DOCKED: MODEL       22
+DOCKED: USER    Run = 22
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 3.398573 -1.701252 8.926704
+DOCKED: USER    NEWDPF quaternion0 0.202515 -0.823980 0.355229 0.392247
+DOCKED: USER    NEWDPF axisangle0 0.220158 -0.895766 0.386177 133.811237
+DOCKED: USER    NEWDPF quat0 0.220158 -0.895766 0.386177 133.811237
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.525  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 23 of 50
+Run: 23 Seed: 1732072081 1355283766 [ Run 23 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -3.880 2.945 1.344 quatxyzw -0.027395 0.111753 0.666543 -0.736533 center 6.213 0.333 0.023 ntor 0
+State:	 -3.880   2.945   1.344  -0.041  0.165  0.985 -85.126  
+
+DOCKED: MODEL       23
+DOCKED: USER    Run = 23
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -3.879991 2.945466 1.344117
+DOCKED: USER    NEWDPF quaternion0 -0.027395 0.111753 0.666543 -0.736533
+DOCKED: USER    NEWDPF axisangle0 -0.040502 0.165217 0.985425 -85.126185
+DOCKED: USER    NEWDPF quat0 -0.040502 0.165217 0.985425 -85.126185
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.857   3.840   1.824 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 24 of 50
+Run: 24 Seed: 1593090151 1714215603 [ Run 24 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.743 12.170 21.023 quatxyzw 0.166684 -0.648552 0.742555 -0.014435 center 6.213 0.333 0.023 ntor 0
+State:	 41.743  12.170  21.023   0.167 -0.649  0.743 -178.346  
+
+DOCKED: MODEL       24
+DOCKED: USER    Run = 24
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.742811 12.169574 21.022534
+DOCKED: USER    NEWDPF quaternion0 0.166684 -0.648552 0.742555 -0.014435
+DOCKED: USER    NEWDPF axisangle0 0.166702 -0.648619 0.742633 -178.345799
+DOCKED: USER    NEWDPF quat0 0.166702 -0.648619 0.742633 -178.345799
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.306  11.394  22.156 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 25 of 50
+Run: 25 Seed: 1436233800 13774846 [ Run 25 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.521 2.475 1.505 quatxyzw 0.252640 0.319433 0.908417 -0.094409 center 6.213 0.333 0.023 ntor 0
+State:	 -2.521   2.475   1.505   0.254  0.321  0.912 -169.165  
+
+DOCKED: MODEL       25
+DOCKED: USER    Run = 25
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -2.521433 2.474506 1.504502
+DOCKED: USER    NEWDPF quaternion0 0.252640 0.319433 0.908417 -0.094409
+DOCKED: USER    NEWDPF axisangle0 0.253774 0.320866 0.912493 -169.165368
+DOCKED: USER    NEWDPF quat0 0.253774 0.320866 0.912493 -169.165368
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.853   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 26 of 50
+Run: 26 Seed: 778494376 298471927 [ Run 26 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.297
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 31.397 -22.612 23.340 quatxyzw 0.487101 0.733268 0.391359 0.268119 center 6.213 0.333 0.023 ntor 0
+State:	 31.397 -22.612  23.340   0.506  0.761  0.406 148.895  
+
+DOCKED: MODEL       26
+DOCKED: USER    Run = 26
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.30 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.30 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 31.397458 -22.612310 23.340292
+DOCKED: USER    NEWDPF quaternion0 0.487101 0.733268 0.391359 0.268119
+DOCKED: USER    NEWDPF axisangle0 0.505614 0.761137 0.406233 148.895286
+DOCKED: USER    NEWDPF quat0 0.505614 0.761137 0.406233 148.895286
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.263 -21.723  23.319 -0.30 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 27 of 50
+Run: 27 Seed: 2065168441 1368430180 [ Run 27 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 3.650 -1.739 8.437 quatxyzw -0.181453 0.047090 0.371888 0.909152 center 6.213 0.333 0.023 ntor 0
+State:	  3.650  -1.739   8.437  -0.436  0.113  0.893 49.223  
+
+DOCKED: MODEL       27
+DOCKED: USER    Run = 27
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 3.649696 -1.739194 8.437041
+DOCKED: USER    NEWDPF quaternion0 -0.181453 0.047090 0.371888 0.909152
+DOCKED: USER    NEWDPF axisangle0 -0.435698 0.113071 0.892962 49.223232
+DOCKED: USER    NEWDPF quat0 -0.435698 0.113071 0.892962 49.223232
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.535  -3.131   8.795 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 28 of 50
+Run: 28 Seed: 838263875 419486634 [ Run 28 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 2.243 -3.653 8.412 quatxyzw -0.025456 -0.144142 -0.543817 0.826340 center 6.213 0.333 0.023 ntor 0
+State:	  2.243  -3.653   8.412  -0.045 -0.256 -0.966 68.551  
+
+DOCKED: MODEL       28
+DOCKED: USER    Run = 28
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 2.243204 -3.652945 8.412055
+DOCKED: USER    NEWDPF quaternion0 -0.025456 -0.144142 -0.543817 0.826340
+DOCKED: USER    NEWDPF axisangle0 -0.045200 -0.255946 -0.965634 68.550829
+DOCKED: USER    NEWDPF quat0 -0.045200 -0.255946 -0.965634 68.550829
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.531  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 29 of 50
+Run: 29 Seed: 1217886884 398660465 [ Run 29 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.394 11.799 23.008 quatxyzw 0.455865 -0.418271 -0.667751 -0.413938 center 6.213 0.333 0.023 ntor 0
+State:	 42.394  11.799  23.008   0.501 -0.459 -0.734 -131.095  
+
+DOCKED: MODEL       29
+DOCKED: USER    Run = 29
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 42.393501 11.798637 23.008153
+DOCKED: USER    NEWDPF quaternion0 0.455865 -0.418271 -0.667751 -0.413938
+DOCKED: USER    NEWDPF axisangle0 0.500783 -0.459484 -0.733547 -131.095120
+DOCKED: USER    NEWDPF quat0 0.500783 -0.459484 -0.733547 -131.095120
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.303  11.394  22.156 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 30 of 50
+Run: 30 Seed: 421517933 393339342 [ Run 30 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.334
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.420 20.453 28.577 quatxyzw 0.904355 0.159033 -0.139545 0.370645 center 6.213 0.333 0.023 ntor 0
+State:	  8.420  20.453  28.577   0.974  0.171 -0.150 136.489  
+
+DOCKED: MODEL       30
+DOCKED: USER    Run = 30
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 8.419502 20.452558 28.577055
+DOCKED: USER    NEWDPF quaternion0 0.904355 0.159033 -0.139545 0.370645
+DOCKED: USER    NEWDPF axisangle0 0.973708 0.171229 -0.150247 136.489147
+DOCKED: USER    NEWDPF quat0 0.973708 0.171229 -0.150247 136.489147
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       8.764  21.852  28.548 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 31 of 50
+Run: 31 Seed: 1635131607 1616606975 [ Run 31 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 52.218 15.821 9.128 quatxyzw 0.387760 0.095072 -0.676779 -0.618525 center 6.213 0.333 0.023 ntor 0
+State:	 52.218  15.821   9.128   0.493  0.121 -0.861 -103.583  
+
+DOCKED: MODEL       31
+DOCKED: USER    Run = 31
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 52.218383 15.820624 9.128018
+DOCKED: USER    NEWDPF quaternion0 0.387760 0.095072 -0.676779 -0.618525
+DOCKED: USER    NEWDPF axisangle0 0.493481 0.120993 -0.861300 -103.582978
+DOCKED: USER    NEWDPF quat0 0.493481 0.120993 -0.861300 -103.582978
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      51.179  14.879   8.794 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 32 of 50
+Run: 32 Seed: 2088762939 104121773 [ Run 32 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.313
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.094 -17.203 25.240 quatxyzw 0.931210 0.053746 -0.121431 0.339431 center 6.213 0.333 0.023 ntor 0
+State:	 22.094 -17.203  25.240   0.990  0.057 -0.129 140.316  
+
+DOCKED: MODEL       32
+DOCKED: USER    Run = 32
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 22.093780 -17.203238 25.239525
+DOCKED: USER    NEWDPF quaternion0 0.931210 0.053746 -0.121431 0.339431
+DOCKED: USER    NEWDPF axisangle0 0.989985 0.057138 -0.129096 140.315622
+DOCKED: USER    NEWDPF quat0 0.989985 0.057138 -0.129096 140.315622
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      22.711 -15.913  25.062 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 33 of 50
+Run: 33 Seed: 1470827455 1034410505 [ Run 33 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.313
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 22.235 -15.704 26.406 quatxyzw -0.263808 -0.734386 -0.177882 0.599534 center 6.213 0.333 0.023 ntor 0
+State:	 22.235 -15.704  26.406  -0.330 -0.918 -0.222 106.327  
+
+DOCKED: MODEL       33
+DOCKED: USER    Run = 33
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 22.234701 -15.703956 26.406456
+DOCKED: USER    NEWDPF quaternion0 -0.263808 -0.734386 -0.177882 0.599534
+DOCKED: USER    NEWDPF axisangle0 -0.329616 -0.917582 -0.222256 106.327003
+DOCKED: USER    NEWDPF quat0 -0.329616 -0.917582 -0.222256 106.327003
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      22.710 -15.912  25.062 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 34 of 50
+Run: 34 Seed: 1180437701 307200655 [ Run 34 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 3.877 -4.423 9.334 quatxyzw 0.692936 0.615859 0.374500 -0.017539 center 6.213 0.333 0.023 ntor 0
+State:	  3.877  -4.423   9.334   0.693  0.616  0.375 -177.990  
+
+DOCKED: MODEL       34
+DOCKED: USER    Run = 34
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 3.876599 -4.423011 9.333515
+DOCKED: USER    NEWDPF quaternion0 0.692936 0.615859 0.374500 -0.017539
+DOCKED: USER    NEWDPF axisangle0 0.693042 0.615954 0.374558 -177.990055
+DOCKED: USER    NEWDPF quat0 0.693042 0.615954 0.374558 -177.990055
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.535  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 35 of 50
+Run: 35 Seed: 1496791243 947065300 [ Run 35 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.292
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 30.855 -15.372 15.443 quatxyzw 0.178277 -0.543659 0.099598 -0.814083 center 6.213 0.333 0.023 ntor 0
+State:	 30.855 -15.372  15.443   0.307 -0.936  0.172 -71.006  
+
+DOCKED: MODEL       35
+DOCKED: USER    Run = 35
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.10 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.29 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.29 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 30.854810 -15.372165 15.442830
+DOCKED: USER    NEWDPF quaternion0 0.178277 -0.543659 0.099598 -0.814083
+DOCKED: USER    NEWDPF axisangle0 0.306979 -0.936137 0.171500 -71.006342
+DOCKED: USER    NEWDPF quat0 0.306979 -0.936137 0.171500 -71.006342
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.845 -16.494  16.348 -0.29 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 36 of 50
+Run: 36 Seed: 1342909100 416902296 [ Run 36 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 39.936 11.103 22.500 quatxyzw -0.385074 -0.276071 -0.460092 0.750878 center 6.213 0.333 0.023 ntor 0
+State:	 39.936  11.103  22.500  -0.583 -0.418 -0.697 82.667  
+
+DOCKED: MODEL       36
+DOCKED: USER    Run = 36
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 39.936026 11.102916 22.500230
+DOCKED: USER    NEWDPF quaternion0 -0.385074 -0.276071 -0.460092 0.750878
+DOCKED: USER    NEWDPF axisangle0 -0.583057 -0.418010 -0.696644 82.666937
+DOCKED: USER    NEWDPF quat0 -0.583057 -0.418010 -0.696644 82.666937
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.305  11.395  22.155 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 37 of 50
+Run: 37 Seed: 980959029 1337430716 [ Run 37 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 4.926 -3.502 8.874 quatxyzw 0.108123 -0.394369 -0.859517 -0.306615 center 6.213 0.333 0.023 ntor 0
+State:	  4.926  -3.502   8.874   0.114 -0.414 -0.903 -144.289  
+
+DOCKED: MODEL       37
+DOCKED: USER    Run = 37
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 4.925515 -3.501715 8.874487
+DOCKED: USER    NEWDPF quaternion0 0.108123 -0.394369 -0.859517 -0.306615
+DOCKED: USER    NEWDPF axisangle0 0.113595 -0.414326 -0.903012 -144.289353
+DOCKED: USER    NEWDPF quat0 0.113595 -0.414326 -0.903012 -144.289353
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.535  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 38 of 50
+Run: 38 Seed: 107738526 1024376694 [ Run 38 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 4.243 -2.015 8.218 quatxyzw -0.025793 -0.380055 0.720124 0.579926 center 6.213 0.333 0.023 ntor 0
+State:	  4.243  -2.015   8.218  -0.032 -0.467  0.884 109.109  
+
+DOCKED: MODEL       38
+DOCKED: USER    Run = 38
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 4.242771 -2.015315 8.217680
+DOCKED: USER    NEWDPF quaternion0 -0.025793 -0.380055 0.720124 0.579926
+DOCKED: USER    NEWDPF axisangle0 -0.031661 -0.466515 0.883946 109.109351
+DOCKED: USER    NEWDPF quat0 -0.031661 -0.466515 0.883946 109.109351
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.536  -3.131   8.794 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 39 of 50
+Run: 39 Seed: 1001476857 448706327 [ Run 39 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.631 9.997 22.292 quatxyzw 0.211754 -0.249692 -0.904194 0.274314 center 6.213 0.333 0.023 ntor 0
+State:	 41.631   9.997  22.292   0.220 -0.260 -0.940 148.158  
+
+DOCKED: MODEL       39
+DOCKED: USER    Run = 39
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.630563 9.996680 22.291773
+DOCKED: USER    NEWDPF quaternion0 0.211754 -0.249692 -0.904194 0.274314
+DOCKED: USER    NEWDPF axisangle0 0.220201 -0.259652 -0.940262 148.157766
+DOCKED: USER    NEWDPF quat0 0.220201 -0.259652 -0.940262 148.157766
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.302  11.394  22.157 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 40 of 50
+Run: 40 Seed: 442474927 1099160242 [ Run 40 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.144 4.178 3.029 quatxyzw 0.361020 -0.775372 -0.493266 -0.158591 center 6.213 0.333 0.023 ntor 0
+State:	 -2.144   4.178   3.029   0.366 -0.785 -0.500 -161.750  
+
+DOCKED: MODEL       40
+DOCKED: USER    Run = 40
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -2.143954 4.178252 3.029375
+DOCKED: USER    NEWDPF quaternion0 0.361020 -0.775372 -0.493266 -0.158591
+DOCKED: USER    NEWDPF axisangle0 0.365647 -0.785311 -0.499589 -161.749788
+DOCKED: USER    NEWDPF quat0 0.365647 -0.785311 -0.499589 -161.749788
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.855   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 41 of 50
+Run: 41 Seed: 637629902 269756450 [ Run 41 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.079 12.218 21.264 quatxyzw 0.054438 -0.304890 0.800334 0.513365 center 6.213 0.333 0.023 ntor 0
+State:	 42.079  12.218  21.264   0.063 -0.355  0.933 118.224  
+
+DOCKED: MODEL       41
+DOCKED: USER    Run = 41
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 42.079270 12.218087 21.263947
+DOCKED: USER    NEWDPF quaternion0 0.054438 -0.304890 0.800334 0.513365
+DOCKED: USER    NEWDPF axisangle0 0.063434 -0.355279 0.932605 118.223557
+DOCKED: USER    NEWDPF quat0 0.063434 -0.355279 0.932605 118.223557
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.305  11.394  22.157 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 42 of 50
+Run: 42 Seed: 1357471761 1381301399 [ Run 42 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.255 12.474 23.109 quatxyzw -0.433004 0.896802 0.090147 0.011259 center 6.213 0.333 0.023 ntor 0
+State:	 41.255  12.474  23.109  -0.433  0.897  0.090 178.710  
+
+DOCKED: MODEL       42
+DOCKED: USER    Run = 42
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.254994 12.474008 23.108816
+DOCKED: USER    NEWDPF quaternion0 -0.433004 0.896802 0.090147 0.011259
+DOCKED: USER    NEWDPF axisangle0 -0.433031 0.896859 0.090152 178.709740
+DOCKED: USER    NEWDPF quat0 -0.433031 0.896859 0.090152 178.709740
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.305  11.394  22.156 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 43 of 50
+Run: 43 Seed: 873884980 1962521869 [ Run 43 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.334
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 9.037 23.252 28.761 quatxyzw -0.273931 -0.271913 0.467013 0.795566 center 6.213 0.333 0.023 ntor 0
+State:	  9.037  23.252  28.761  -0.452 -0.449  0.771 74.583  
+
+DOCKED: MODEL       43
+DOCKED: USER    Run = 43
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 9.036579 23.251989 28.760746
+DOCKED: USER    NEWDPF quaternion0 -0.273931 -0.271913 0.467013 0.795566
+DOCKED: USER    NEWDPF axisangle0 -0.452130 -0.448799 0.770817 74.582597
+DOCKED: USER    NEWDPF quat0 -0.452130 -0.448799 0.770817 74.582597
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       8.765  21.852  28.548 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 44 of 50
+Run: 44 Seed: 904805170 1317359197 [ Run 44 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.297
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 30.176 -22.369 24.605 quatxyzw 0.885640 0.376115 -0.064428 -0.264628 center 6.213 0.333 0.023 ntor 0
+State:	 30.176 -22.369  24.605   0.918  0.390 -0.067 -149.310  
+
+DOCKED: MODEL       44
+DOCKED: USER    Run = 44
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.30 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.30 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 30.175727 -22.368961 24.605346
+DOCKED: USER    NEWDPF quaternion0 0.885640 0.376115 -0.064428 -0.264628
+DOCKED: USER    NEWDPF axisangle0 0.918380 0.390019 -0.066810 -149.310315
+DOCKED: USER    NEWDPF quat0 0.918380 0.390019 -0.066810 -149.310315
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      30.252 -21.723  23.319 -0.30 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 45 of 50
+Run: 45 Seed: 1966633352 1508573383 [ Run 45 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.316
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -1.538 3.471 2.568 quatxyzw -0.576057 -0.708886 0.406742 0.014140 center 6.213 0.333 0.023 ntor 0
+State:	 -1.538   3.471   2.568  -0.576 -0.709  0.407 178.380  
+
+DOCKED: MODEL       45
+DOCKED: USER    Run = 45
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -1.538359 3.471462 2.567905
+DOCKED: USER    NEWDPF quaternion0 -0.576057 -0.708886 0.406742 0.014140
+DOCKED: USER    NEWDPF axisangle0 -0.576115 -0.708957 0.406783 178.379628
+DOCKED: USER    NEWDPF quat0 -0.576115 -0.708957 0.406783 178.379628
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.886   3.708   2.114 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 46 of 50
+Run: 46 Seed: 53432164 963532936 [ Run 46 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.331
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -1.983 4.759 1.133 quatxyzw -0.032155 0.037978 0.681857 0.729791 center 6.213 0.333 0.023 ntor 0
+State:	 -1.983   4.759   1.133  -0.047  0.056  0.997 86.262  
+
+DOCKED: MODEL       46
+DOCKED: USER    Run = 46
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 -1.982756 4.758562 1.132822
+DOCKED: USER    NEWDPF quaternion0 -0.032155 0.037978 0.681857 0.729791
+DOCKED: USER    NEWDPF axisangle0 -0.047033 0.055551 0.997348 86.262287
+DOCKED: USER    NEWDPF quat0 -0.047033 0.055551 0.997348 86.262287
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      -2.855   3.841   1.822 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 47 of 50
+Run: 47 Seed: 244559631 748619848 [ Run 47 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.321
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 8.277 -2.071 10.428 quatxyzw -0.007428 0.448216 -0.879388 0.160387 center 6.213 0.333 0.023 ntor 0
+State:	  8.277  -2.071  10.428  -0.008  0.454 -0.891 161.541  
+
+DOCKED: MODEL       47
+DOCKED: USER    Run = 47
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 8.277002 -2.070658 10.428315
+DOCKED: USER    NEWDPF quaternion0 -0.007428 0.448216 -0.879388 0.160387
+DOCKED: USER    NEWDPF axisangle0 -0.007525 0.454095 -0.890922 161.541334
+DOCKED: USER    NEWDPF quat0 -0.007525 0.454095 -0.890922 161.541334
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       7.605  -1.969  11.699 -0.32 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 48 of 50
+Run: 48 Seed: 1844007824 1001930896 [ Run 48 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 41.198 10.618 20.940 quatxyzw -0.564026 -0.045306 -0.797490 -0.209360 center 6.213 0.333 0.023 ntor 0
+State:	 41.198  10.618  20.940  -0.577 -0.046 -0.816 -155.830  
+
+DOCKED: MODEL       48
+DOCKED: USER    Run = 48
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 41.197883 10.618466 20.940197
+DOCKED: USER    NEWDPF quaternion0 -0.564026 -0.045306 -0.797490 -0.209360
+DOCKED: USER    NEWDPF axisangle0 -0.576809 -0.046332 -0.815564 -155.830311
+DOCKED: USER    NEWDPF quat0 -0.576809 -0.046332 -0.815564 -155.830311
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.304  11.392  22.152 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 49 of 50
+Run: 49 Seed: 1344681451 1360638651 [ Run 49 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.312
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 3.070 -2.632 7.537 quatxyzw -0.485733 0.459112 -0.729550 -0.145039 center 6.213 0.333 0.023 ntor 0
+State:	  3.070  -2.632   7.537  -0.491  0.464 -0.737 -163.321  
+
+DOCKED: MODEL       49
+DOCKED: USER    Run = 49
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 3.069901 -2.631504 7.536613
+DOCKED: USER    NEWDPF quaternion0 -0.485733 0.459112 -0.729550 -0.145039
+DOCKED: USER    NEWDPF axisangle0 -0.490924 0.464018 -0.737347 -163.320892
+DOCKED: USER    NEWDPF quat0 -0.490924 0.464018 -0.737347 -163.320892
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0       3.498  -3.145   8.814 -0.31 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 50 of 50
+Run: 50 Seed: 122502718 205347465 [ Run 50 of 50 GA/GALS ]
+Beginning GENETIC ALGORITHM (GA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -0.329
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 42.060 10.290 22.686 quatxyzw -0.792587 -0.322303 0.502916 -0.122482 center 6.213 0.333 0.023 ntor 0
+State:	 42.060  10.290  22.686  -0.799 -0.325  0.507 -165.929  
+
+DOCKED: MODEL       50
+DOCKED: USER    Run = 50
+DOCKED: USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.00 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move lig.pdbqt
+DOCKED: USER    NEWDPF about 6.213000 0.333000 0.023000
+DOCKED: USER    NEWDPF tran0 42.060401 10.289572 22.685834
+DOCKED: USER    NEWDPF quaternion0 -0.792587 -0.322303 0.502916 -0.122482
+DOCKED: USER    NEWDPF axisangle0 -0.798600 -0.324748 0.506731 -165.929217
+DOCKED: USER    NEWDPF quat0 -0.798600 -0.324748 0.506731 -165.929217
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  16 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+DOCKED: REMARK    2  A    between atoms: C24_23  and  C30_29 
+DOCKED: REMARK    3  A    between atoms: C24_23  and  C27_26 
+DOCKED: REMARK    4  A    between atoms: C24_23  and  C31_30 
+DOCKED: REMARK    5  A    between atoms: C25_24  and  C33_32 
+DOCKED: REMARK    6  A    between atoms: C25_24  and  C32_31 
+DOCKED: REMARK    7  A    between atoms: C25_24  and  C28_27 
+DOCKED: REMARK    8  A    between atoms: C26_25  and  C29_28 
+DOCKED: REMARK    9  A    between atoms: C26_25  and  C34_33 
+DOCKED: REMARK   10  A    between atoms: C26_25  and  C35_34 
+DOCKED: REMARK   11  A    between atoms: C30_29  and  C36_35 
+DOCKED: REMARK   12  A    between atoms: C31_30  and  C37_36 
+DOCKED: REMARK   13  A    between atoms: C32_31  and  C38_37 
+DOCKED: REMARK   14  A    between atoms: C33_32  and  C39_38 
+DOCKED: REMARK   15  A    between atoms: C34_33  and  C40_39 
+DOCKED: REMARK   16  A    between atoms: C35_34  and  C41_40 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1 TI1          0      41.302  11.394  22.154 -0.33 +0.00    +0.000 Ti
+DOCKED: ENDROOT
+DOCKED: TORSDOF 16
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 50
+
+RMSD cluster analysis will be performed using the ligand atoms only (1 / 1 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 9,  out of 50 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     +4.06 |  43 |     +4.06 |   3 |###
+   2 |     +4.06 |  12 |     +4.06 |   8 |########
+   3 |     +4.06 |  39 |     +4.06 |  12 |############
+   4 |     +4.07 |  19 |     +4.07 |   5 |#####
+   5 |     +4.07 |   9 |     +4.07 |   2 |##
+   6 |     +4.08 |   7 |     +4.08 |   4 |####
+   7 |     +4.08 |  11 |     +4.08 |  10 |##########
+   8 |     +4.09 |  26 |     +4.09 |   4 |####
+   9 |     +4.10 |  21 |     +4.10 |   2 |##
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 9, out of 50 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1     43       +4.06      0.00     35.70           RANKING
+   1      2     30       +4.06      0.00     35.69           RANKING
+   1      3     15       +4.06      0.00     35.69           RANKING
+   2      1     12       +4.06      0.00     10.90           RANKING
+   2      2     18       +4.06      0.00     10.90           RANKING
+   2      3     46       +4.06      0.00     10.90           RANKING
+   2      4      2       +4.06      0.00     10.90           RANKING
+   2      5     40       +4.06      0.00     10.90           RANKING
+   2      6     25       +4.06      0.00     10.90           RANKING
+   2      7     23       +4.06      0.00     10.90           RANKING
+   2      8     45       +4.07      0.32     10.91           RANKING
+   3      1     39       +4.06      0.00     42.07           RANKING
+   3      2     16       +4.06      0.00     42.07           RANKING
+   3      3     10       +4.06      0.00     42.07           RANKING
+   3      4     29       +4.06      0.00     42.07           RANKING
+   3      5     41       +4.06      0.00     42.07           RANKING
+   3      6      5       +4.06      0.00     42.07           RANKING
+   3      7     42       +4.06      0.00     42.07           RANKING
+   3      8     50       +4.06      0.00     42.07           RANKING
+   3      9     24       +4.06      0.00     42.07           RANKING
+   3     10     17       +4.06      0.01     42.08           RANKING
+   3     11     36       +4.06      0.00     42.07           RANKING
+   3     12     48       +4.06      0.01     42.07           RANKING
+   4      1     19       +4.07      0.00     11.02           RANKING
+   4      2     47       +4.07      0.00     11.02           RANKING
+   4      3     14       +4.07      0.00     11.02           RANKING
+   4      4      8       +4.07      0.00     11.02           RANKING
+   4      5     13       +4.07      0.00     11.02           RANKING
+   5      1      9       +4.07      0.00     47.39           RANKING
+   5      2     31       +4.07      0.00     47.40           RANKING
+   6      1      7       +4.08      0.00     32.71           RANKING
+   6      2     33       +4.08      0.00     32.71           RANKING
+   6      3     32       +4.08      0.00     32.71           RANKING
+   6      4      6       +4.08      0.00     32.71           RANKING
+   7      1     11       +4.08      0.00      9.13           RANKING
+   7      2     22       +4.08      0.01      9.14           RANKING
+   7      3     38       +4.08      0.00      9.13           RANKING
+   7      4     37       +4.08      0.00      9.13           RANKING
+   7      5     28       +4.08      0.01      9.13           RANKING
+   7      6      1       +4.08      0.00      9.13           RANKING
+   7      7     27       +4.08      0.00      9.13           RANKING
+   7      8     34       +4.08      0.00      9.13           RANKING
+   7      9      4       +4.08      0.00      9.13           RANKING
+   7     10     49       +4.08      0.05      9.17           RANKING
+   8      1     26       +4.09      0.00     38.66           RANKING
+   8      2     20       +4.09      0.00     38.65           RANKING
+   8      3      3       +4.09      0.01     38.65           RANKING
+   8      4     44       +4.09      0.01     38.65           RANKING
+   9      1     21       +4.10      0.00     32.58           RANKING
+   9      2     35       +4.10      0.00     32.59           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.52  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    49.66            at Temperature, T = 298.15 K
+Free energy,        A ~ -2313.73 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =     4.07 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     7.77 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL       43
+USER    Run = 43
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 3
+USER  
+USER    RMSD from reference structure       = 35.695 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	9.036579 23.251989 28.760746
+USER    NEWDPF axisangle0	-0.452130 -0.448799 0.770817 74.582597
+USER    NEWDPF quaternion0	-0.273931 -0.271913 0.467013 0.795566
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0       8.765  21.852  28.548 -0.33 +0.00    +0.000    35.695
+TER
+ENDMDL
+MODEL       12
+USER    Run = 12
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 8
+USER  
+USER    RMSD from reference structure       = 10.899 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	-4.274976 3.962421 2.033522
+USER    NEWDPF axisangle0	-0.893985 0.397017 -0.207770 -176.485085
+USER    NEWDPF quaternion0	-0.893565 0.396830 -0.207672 -0.030669
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      -2.854   3.841   1.822 -0.33 +0.00    +0.000    10.899
+TER
+ENDMDL
+MODEL       39
+USER    Run = 39
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 12
+USER  
+USER    RMSD from reference structure       = 42.070 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.06 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.33 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.33 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	41.630563 9.996680 22.291773
+USER    NEWDPF axisangle0	0.220201 -0.259652 -0.940262 148.157766
+USER    NEWDPF quaternion0	0.211754 -0.249692 -0.904194 0.274314
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      41.302  11.394  22.157 -0.33 +0.00    +0.000    42.070
+TER
+ENDMDL
+MODEL       19
+USER    Run = 19
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 5
+USER  
+USER    RMSD from reference structure       = 11.017 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	8.470525 -3.075377 11.380512
+USER    NEWDPF axisangle0	0.568243 0.328255 -0.754552 145.170875
+USER    NEWDPF quaternion0	0.542197 0.313209 -0.719967 0.299283
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0       7.604  -1.969  11.700 -0.32 +0.00    +0.000    11.017
+TER
+ENDMDL
+MODEL        9
+USER    Run = 9
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 47.394 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.07 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.32 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.32 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	52.553237 14.742400 9.202403
+USER    NEWDPF axisangle0	0.450637 0.886297 -0.106793 167.694614
+USER    NEWDPF quaternion0	0.448041 0.881191 -0.106178 0.107178
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      51.178  14.880   8.794 -0.32 +0.00    +0.000    47.394
+TER
+ENDMDL
+MODEL        7
+USER    Run = 7
+USER    Cluster Rank = 6
+USER    Number of conformations in this cluster = 4
+USER  
+USER    RMSD from reference structure       = 32.713 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	23.324616 -14.669418 25.454166
+USER    NEWDPF axisangle0	0.307450 -0.948329 -0.078406 -141.200627
+USER    NEWDPF quaternion0	0.289994 -0.894487 -0.073955 -0.332156
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      22.711 -15.913  25.061 -0.31 +0.00    +0.000    32.713
+TER
+ENDMDL
+MODEL       11
+USER    Run = 11
+USER    Cluster Rank = 7
+USER    Number of conformations in this cluster = 10
+USER  
+USER    RMSD from reference structure       = 9.131 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.08 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.31 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.31 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	4.569915 -3.037048 9.795129
+USER    NEWDPF axisangle0	0.383839 -0.622959 -0.681608 -150.192941
+USER    NEWDPF quaternion0	0.370927 -0.602003 -0.658679 -0.257192
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0       3.537  -3.131   8.794 -0.31 +0.00    +0.000     9.131
+TER
+ENDMDL
+MODEL       26
+USER    Run = 26
+USER    Cluster Rank = 8
+USER    Number of conformations in this cluster = 4
+USER  
+USER    RMSD from reference structure       = 38.657 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.09 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.30 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.30 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	31.397458 -22.612310 23.340292
+USER    NEWDPF axisangle0	0.505614 0.761137 0.406233 148.895286
+USER    NEWDPF quaternion0	0.487101 0.733268 0.391359 0.268119
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      30.263 -21.723  23.319 -0.30 +0.00    +0.000    38.657
+TER
+ENDMDL
+MODEL       21
+USER    Run = 21
+USER    Cluster Rank = 9
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 32.584 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.10 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   -0.29 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -0.29 kcal/mol
+USER        Electrostatic Energy            =   +0.00 kcal/mol
+USER    (2) Final Total Internal Energy     =   +0.00 kcal/mol
+USER    (3) Torsional Free Energy           =   +4.39 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   +0.00 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = C:/projects/md/prod/saem_bhai/dock.dpf
+USER    NEWDPF move	lig.pdbqt
+USER    NEWDPF about	6.213000 0.333000 0.023000
+USER    NEWDPF tran0	29.615509 -16.352535 17.090644
+USER    NEWDPF axisangle0	0.966135 -0.226331 0.123926 -143.788682
+USER    NEWDPF quaternion0	0.918297 -0.215124 0.117790 -0.310770
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1 TI1          0      30.843 -16.494  16.348 -0.29 +0.00    +0.000    32.584
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=1           # atoms
+AVSFLD: dim2=9           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = C:/projects/md/prod/saem_bhai/dock.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			4:22 57" a.m., 03/01/2024
+
+
+________________________________________________________________________________
+
+C:/projects/md/prod/saem_bhai/autodock4.exe: Successful Completion on "DHN-POWER"
+
+Real= 24m 32.79s,  CPU= 39.59s,  System= 1.27s
+________________________________________________________________________________
+

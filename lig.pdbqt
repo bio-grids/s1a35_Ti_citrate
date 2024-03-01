@@ -1,0 +1,22 @@
+REMARK  16 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: TI1_1  and  TI1_1 
+REMARK    2  A    between atoms: C24_23  and  C30_29 
+REMARK    3  A    between atoms: C24_23  and  C27_26 
+REMARK    4  A    between atoms: C24_23  and  C31_30 
+REMARK    5  A    between atoms: C25_24  and  C33_32 
+REMARK    6  A    between atoms: C25_24  and  C32_31 
+REMARK    7  A    between atoms: C25_24  and  C28_27 
+REMARK    8  A    between atoms: C26_25  and  C29_28 
+REMARK    9  A    between atoms: C26_25  and  C34_33 
+REMARK   10  A    between atoms: C26_25  and  C35_34 
+REMARK   11  A    between atoms: C30_29  and  C36_35 
+REMARK   12  A    between atoms: C31_30  and  C37_36 
+REMARK   13  A    between atoms: C32_31  and  C38_37 
+REMARK   14  A    between atoms: C33_32  and  C39_38 
+REMARK   15  A    between atoms: C34_33  and  C40_39 
+REMARK   16  A    between atoms: C35_34  and  C41_40 
+ROOT
+HETATM    1 TI1          0       7.078  -0.527   0.791  1.00  0.00     0.000 Ti
+ENDROOT
+TORSDOF 16
